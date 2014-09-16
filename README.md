@@ -1,4 +1,4 @@
-AngularGPALab
+AngularGP ALab
 ===============
 There are several goals in this lab:
    * Understand how to use Angular to create views and view-models
