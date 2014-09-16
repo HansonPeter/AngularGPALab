@@ -37,7 +37,8 @@
         </div>
     </div>
 
-    <div class="col-md-4 col-md-offset-1 section" ng-controller="DropdownCtrl">
+    <div class="col-md-4 col-md-offset-1">
+        <div class="section" ng-controller="DropdownCtrl">
         <!-- Simple dropdown -->
         <span class="dropdown" on-toggle="toggled(open)">
           <a href class="dropdown-toggle">
@@ -85,7 +86,56 @@
             <button type="button" class="btn btn-default btn-sm" ng-click="toggleDropdown($event)">Toggle button dropdown</button>
             <button type="button" class="btn btn-warning btn-sm" ng-click="disabled = !disabled">Enable/Disable</button>
         </p>
+        </div>
 
+        <div ng-controller="DropdownGradeCtrl">
+            <table style="width:100%">
+                <tr>
+                    <td>Class 1:</td>
+
+                    <td>
+                        <div class="btn-group" dropdown is-open="status.isopen">
+                            <button type="button" class="btn btn-primary dropdown-toggle">
+                                {{selectedGrade.letter}} <span class="caret"></span>
+                            </button>
+                            <ul  class="dropdown-menu" role="menu">
+                                <li ng-repeat="grade in grades">
+                                    <a href="#" ng-click="selectGrade(grade)">{{grade.letter}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Class 2:</td>
+
+                    <td></td>
+
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Class 3:</td>
+
+                    <td></td>
+
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Class 4:</td>
+
+                    <td></td>
+
+                    <td></td>
+                </tr>
+            </table>
+            <!-- Add calculate button here. -->
+            <!-- Print GPA here. -->
+        </div>
     </div>
+
 </body>
 </html>
