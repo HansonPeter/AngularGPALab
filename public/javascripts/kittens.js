@@ -38,6 +38,10 @@ function DropdownCtrl($scope) {
 }
 
 function DropdownGradeCtrl($scope) {
+    $scope.currentGrades = {
+
+    };
+
     $scope.grades = [
         {letter: 'A', gradePoints: 4},
         {letter: 'A-', gradePoints: 3.67},
@@ -49,9 +53,28 @@ function DropdownGradeCtrl($scope) {
         {letter: 'C-', gradePoints: 1.67},
         {letter: 'D+', gradePoints: 1.33},
         {letter: 'D', gradePoints: 1},
-        {letter: 'D-', gradePoints: .67},
         {letter: 'F', gradePoints: 0}
     ];
+
+    $scope.credits = [
+        1,
+        2,
+        3,
+        4,
+        5
+    ];
+
+    $scope.selectGrade1 = function(grade) {
+        $scope.selectedGrade1 = grade;
+    };
+
+    $scope.selectCredit1 = function(credit) {
+        $scope.selectedCredit1 = credit;
+    };
+
+    $scope.calculateGPA = function() {
+
+    };
 
     $scope.status = {
         isopen: false
