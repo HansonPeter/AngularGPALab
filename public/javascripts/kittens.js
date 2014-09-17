@@ -78,17 +78,23 @@ function DropdownGradeCtrl($scope) {
         5
     ];
 
-    $scope.selectGrade1 = function(course, grade) {
+    $scope.selectGrade = function(course, grade) {
         course.letter = grade.letter;
         course.gradePoints = grade.gradePoints;
     };
 
-    $scope.selectCredit1 = function(course, credit) {
+    $scope.selectCredit = function(course, credit) {
         course.credits = credit;
     };
 
     $scope.calculateGPA = function() {
+        var GPA;
 
+        for (var i = 0; i < $scope.classes.length; ++i) {
+            GPA += ($scope.classes[i].gradePoints * $scope.classes[i].credits);
+        };
+
+        return (GPA / $scope.classes.length);
     };
 
     $scope.status = {
