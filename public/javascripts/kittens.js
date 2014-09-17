@@ -88,13 +88,20 @@ function DropdownGradeCtrl($scope) {
     };
 
     $scope.calculateGPA = function() {
-        var GPA;
+        var GPA = 0;
+        var totalCredits = 0;
 
         for (var i = 0; i < $scope.classes.length; ++i) {
             GPA += ($scope.classes[i].gradePoints * $scope.classes[i].credits);
+            totalCredits += $scope.classes[i].credits;
         };
 
-        return (GPA / $scope.classes.length);
+        if (totalCredits != 0) {
+            return (GPA / totalCredits);
+        } else {
+            return "You need to select courses and credits!";
+        }
+
     };
 
     $scope.status = {
