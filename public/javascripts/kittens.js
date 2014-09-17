@@ -38,9 +38,23 @@ function DropdownCtrl($scope) {
 }
 
 function DropdownGradeCtrl($scope) {
-    $scope.currentGrades = {
-
+    $scope.statuses = {
+        isopen1: false,
+        isopen2: false,
+        isopen3: false,
+        isopen4: false,
+        isopen5: false,
+        isopen6: false,
+        isopen7: false,
+        isopen8: false
     };
+
+    $scope.classes = [
+        {letter: "", gradePoints: 0, credits: 0},
+        {letter: "", gradePoints: 0, credits: 0},
+        {letter: "", gradePoints: 0, credits: 0},
+        {letter: "", gradePoints: 0, credits: 0}
+    ];
 
     $scope.grades = [
         {letter: 'A', gradePoints: 4},

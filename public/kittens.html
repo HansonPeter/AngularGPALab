@@ -37,154 +37,33 @@
         </div>
     </div>
 
-    <div class="col-md-4 col-md-offset-1">
-        <div class="section" ng-controller="DropdownCtrl">
-        <!-- Simple dropdown -->
-        <span class="dropdown" on-toggle="toggled(open)">
-          <a href class="dropdown-toggle">
-              Click me for a dropdown, yo!
-          </a>
-          <ul class="dropdown-menu">
-              <li ng-repeat="choice in items">
-                  <a href>{{choice}}</a>
-              </li>
-          </ul>
-        </span>
-
-        <!-- Single button -->
-        <div class="btn-group" dropdown is-open="status.isopen">
-            <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
-                Button dropdown <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </div>
-
-        <!-- Split button -->
-        <div class="btn-group" dropdown>
-            <button type="button" class="btn btn-danger">Action</button>
-            <button type="button" class="btn btn-danger dropdown-toggle">
-                <span class="caret"></span>
-                <span class="sr-only">Split button!</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </div>
-
-        <hr />
-        <p>
-            <button type="button" class="btn btn-default btn-sm" ng-click="toggleDropdown($event)">Toggle button dropdown</button>
-            <button type="button" class="btn btn-warning btn-sm" ng-click="disabled = !disabled">Enable/Disable</button>
-        </p>
-        </div>
+    <div class="col-md-4 col-md-offset-1 section">
 
         <div ng-controller="DropdownGradeCtrl">
             <table style="width:100%">
-                <tr>
-                    <td>Class 1:</td>
+
+                <tr ng-repeat="class in classes track by $index">
+
+                    <td>Class {{$index + 1}}</td>
 
                     <td>
-                        <div class="btn-group" dropdown is-open="status.isopen">
+                        <div class="btn-group" dropdown is-open="statuses.isopen{{$index+1}}">
                             <button type="button" class="btn btn-primary dropdown-toggle">
-                                {{selectedGrade1.letter}} <span class="caret"></span>
+                                {{class.letter}} <span class="caret"></span>
                             </button>
                             <ul  class="dropdown-menu" role="menu">
                                 <li ng-repeat="grade in grades">
-                                    <a href="#" ng-click="selectGrade1(grade)">{{grade.letter}}</a>
+                                    <a href="#" ng-click="selectGrade1(grade)">{{class.letter}}</a>
                                 </li>
                             </ul>
                         </div>
                     </td>
 
-                    <td>
-                        <div class="btn-group" dropdown is-open="status.isopen">
-                            <button type="button" class="btn btn-primary dropdown-toggle">
-                                {{selectedCredit1.letter}} <span class="caret"></span>
-                            </button>
-                            <ul  class="dropdown-menu" role="menu">
-                                <li ng-repeat="credit in credits">
-                                    <a href="#" ng-click="selectGrade1(credit)">{{credit}}</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Class 2:</td>
-
-                    <td>
-                        <div class="btn-group" dropdown is-open="status.isopen">
-                            <button type="button" class="btn btn-primary dropdown-toggle">
-                                {{selectedGrade.letter}} <span class="caret"></span>
-                            </button>
-                            <ul  class="dropdown-menu" role="menu">
-                                <li ng-repeat="grade in grades">
-                                    <a href="#" ng-click="selectGrade(grade)">{{grade.letter}}</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Class 3:</td>
-
-                    <td>
-                        <div class="btn-group" dropdown is-open="status.isopen">
-                            <button type="button" class="btn btn-primary dropdown-toggle">
-                                {{selectedGrade.letter}} <span class="caret"></span>
-                            </button>
-                            <ul  class="dropdown-menu" role="menu">
-                                <li ng-repeat="grade in grades">
-                                    <a href="#" ng-click="selectGrade(grade)">{{grade.letter}}</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Class 4:</td>
-
-                    <td>
-                        <div class="btn-group" dropdown is-open="status.isopen">
-                            <button type="button" class="btn btn-primary dropdown-toggle">
-                                {{selectedGrade.letter}} <span class="caret"></span>
-                            </button>
-                            <ul  class="dropdown-menu" role="menu">
-                                <li ng-repeat="grade in grades">
-                                    <a href="#" ng-click="selectGrade(grade)">{{grade.letter}}</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-
-                    <td></td>
                 </tr>
 
-                <tr>
-                    <td>
-                        <!-- Add calculate button here. -->
-                        Calculate
-                    </td>
-                    <td>
-                        <!-- Print GPA here. -->
-                        GPA: 2.00
-                    </td>
-                </tr>
-            </table> 
+            </table>
+
+
 
 
         </div>
