@@ -71,6 +71,7 @@ function DropdownGradeCtrl($scope) {
     ];
 
     $scope.credits = [
+        0,
         1,
         2,
         3,
@@ -97,7 +98,7 @@ function DropdownGradeCtrl($scope) {
         };
 
         if (totalCredits != 0) {
-            return (GPA / totalCredits);
+            return "Your estimated GPA:  " + (GPA / totalCredits);
         } else {
             return "You need to select courses and credits!";
         }

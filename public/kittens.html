@@ -37,10 +37,20 @@
         </div>
     </div>
 
-    <div class="col-md-4 col-md-offset-1 section">
+    <div class="col-md-4 col-md-offset-1 section2">
 
         <div ng-controller="DropdownGradeCtrl">
             <table style="width:100%">
+
+                <tr class="headingsRow">
+
+                    <td>GPA Calculator!</td>
+
+                    <td>Select Grade</td>
+
+                    <td>Select Credits</td>
+
+                </tr>
 
                 <tr ng-repeat="class in classes track by $index">
 
@@ -48,7 +58,7 @@
 
                     <td>
                         <div class="btn-group" dropdown is-open="statuses.isopen{{$index+1}}">
-                            <button type="button" class="btn btn-primary dropdown-toggle">
+                            <button type="button" class="btn fancybutton dropdown-toggle">
                                 {{class.letter}} <span class="caret"></span>
                             </button>
                             <ul  class="dropdown-menu" role="menu">
@@ -61,7 +71,7 @@
 
                     <td>
                         <div class="btn-group" dropdown is-open="statuses.isopen{{$index+5}}">
-                            <button type="button" class="btn btn-primary dropdown-toggle">
+                            <button type="button" class="btn fancybutton dropdown-toggle">
                                 {{class.credits}} <span class="caret"></span>
                             </button>
                             <ul  class="dropdown-menu" role="menu">
