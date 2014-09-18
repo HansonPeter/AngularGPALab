@@ -13,3 +13,15 @@ describe('filter', function(){
     });
 });
 
+
+//****** Our Testing Attempts Start here! ******
+
+// First test attempt based on Angular Documentation.
+//var course = {letter: "", gradePoints: 0, credits: 0};
+//var grade = {letter: "A-", gradePoints: 3.67};
+//
+//var DropdownGradeCtrl = new DropdownGradeCtrl(course, grade);
+//
+//DropdownGradeCtrl.selectGrade(course, grade);
+
+// Now, course.letter should give A- and course.gradePoints should give 3.67.
