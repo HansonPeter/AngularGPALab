@@ -1,4 +1,9 @@
+// Jacob Opdahl and Peter Hanson
+// Lab 4
+// Our controller code is in here.
+
 angular.module('kittensApp', ['ui.bootstrap']);
+
 function CarouselDemoCtrl($scope) {
     $scope.myInterval = 5000;
     var slides = $scope.slides = [];
@@ -37,7 +42,11 @@ function DropdownCtrl($scope) {
     };
 }
 
+// The control we made starts here. The rest came with the lab.
 function DropdownGradeCtrl($scope) {
+
+    // Keeps track of the states of all the buttons independently
+    // using data-binding from angular.
     $scope.statuses = {
         isopen1: false,
         isopen2: false,
@@ -49,6 +58,8 @@ function DropdownGradeCtrl($scope) {
         isopen8: false
     };
 
+    // Each class corresponds to a row in the table for our calculator
+    // and is updated using data-binding.
     $scope.classes = [
         {letter: "", gradePoints: 0, credits: 0},
         {letter: "", gradePoints: 0, credits: 0},
@@ -56,6 +67,7 @@ function DropdownGradeCtrl($scope) {
         {letter: "", gradePoints: 0, credits: 0}
     ];
 
+    // These are the possible grades we consider and their gradepoints.
     $scope.grades = [
         {letter: 'A', gradePoints: 4},
         {letter: 'A-', gradePoints: 3.67},
@@ -70,6 +82,7 @@ function DropdownGradeCtrl($scope) {
         {letter: 'F', gradePoints: 0}
     ];
 
+    // Possible credits a course could have.
     $scope.credits = [
         0,
         1,
@@ -79,15 +92,21 @@ function DropdownGradeCtrl($scope) {
         5
     ];
 
+    // Set the grade in classes[] when a grade is selected
+    // from a dropdown.
     $scope.selectGrade = function(course, grade) {
         course.letter = grade.letter;
         course.gradePoints = grade.gradePoints;
     };
 
+    // Same as previous but with credits.
     $scope.selectCredit = function(course, credit) {
         course.credits = credit;
     };
 
+    // Uses the information in the classes array which has been updated
+    // using data binding to calculate the GPA and instantly display it
+    // using even more data-binding.
     $scope.calculateGPA = function() {
         var GPA = 0;
         var totalCredits = 0;
@@ -105,14 +124,12 @@ function DropdownGradeCtrl($scope) {
 
     };
 
-    $scope.status = {
-        isopen: false
-    };
-
+    // Came from the code we copied above.
     $scope.toggled = function(open) {
         console.log('Dropdown is now: ', open);
     };
 
+    // Came from the code we copied above.
     $scope.toggleDropdown = function($event) {
         $event.preventDefault();
         $event.stopPropagation();
