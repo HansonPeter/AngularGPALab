@@ -60,6 +60,10 @@ function DropdownGradeCtrl($scope) {
 
     // Each class corresponds to a row in the table for our calculator
     // and is updated using data-binding.
+    // Note, we could've added buttons to allow users to add or remove buttons,
+    // but we instead spent our time trying to help KK find a way to test Angular.
+    // Plus, they can technically choose less than four courses by choosing 0 credits.
+    // Also, four tends to be the average.
     $scope.classes = [
         {letter: "", gradePoints: 0, credits: 0},
         {letter: "", gradePoints: 0, credits: 0},

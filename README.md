@@ -1,3 +1,23 @@
+Jacob Opdahl & Peter Hanson - Lab 4
+
+4 Specific Resources:
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+purecss.io/buttons/
+- Used this for styling ideas for our buttons.
+
+http://stackoverflow.com/questions/15410652/using-ng-repeat-and-ng-class-on-rows-inside-a-table
+- Used this to figure out if we could use repeat in a table.
+
+http://stackoverflow.com/questions/19520144/angularjs-bind-data-to-select-drop-down-when-the-value-of-another-select-drop-do
+- Used to help figure out how to display the value selected on a given dropdown button.
+
+http://jsfiddle.net/
+- Was directed to this site by several Stack Overflows to be shown examples of working Angularjs. Could be helpful with experimenting before implementation.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
 AngularGP ALab
 ===============
 There are several goals in this lab:
