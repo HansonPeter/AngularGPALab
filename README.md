@@ -1,6 +1,6 @@
 Jacob Opdahl & Peter Hanson - Lab 4
 
-***4 Specific Resources:***
+***4 Specific Resources***
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 purecss.io/buttons/
@@ -17,7 +17,7 @@ http://jsfiddle.net/
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-***Attempts to make Angular Tests Work:***
+***Attempts to make Angular Tests Work***
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 https://docs.angularjs.org/guide/unit-testing
 - Started here while looking for a testing tutorial. Fouund the documentation for testing
@@ -26,23 +26,25 @@ due to the technicality.
 Attempted to write a test based on the section titled Passing in Dependencies. See attempt is tests.js.
 Got the test written in the format shown in the Angular Documentation. Did not know how to run it. After writing,
 it still doesn't seem like the type of test we are going for with making the test look at the HTML page.
-It seems more like a typical mocha page. Not sure where to go from here.
-Commented it out so it doesn't interfere.
+It seems more like a typical mocha test. Not sure where to go from here.
+Commented it out so it doesn't interfere with the running of the program.
 
 http://andyshora.com/unit-testing-best-practices-angularjs.html
 -This website seemed like it might be useful if you had all the proper tools installed. Like most, it doesn't seem
 to show all the components you actually would want to see to understand entirely what is going on with the tests.
+However, I may just not understand enough about testing to see that it is actually a good resource.
 
 
 *Questions:
 I would like to know what it means to actually test Angular again.
 Could you explain what we are going for with it in class?
+By that I mean, how Angular tests differ from testing the individual functions, etc.
 
 *What we think might be testable with AngularJS:
 Once it works, we think we can test clicking a value for grade and making sure it binds to one of the elements
 in our classes array based on which button was pushed. The same goes for credits.
 Also, we believe we could use Angular testing (if we are understanding it right) to see if calculate GPA
-data binds properly to the place where it is displayed.
+data binds properly to the place where it is displayed based on the values in the classes array.
 Testing these points would essentially test all the main functionality (if not ALL the functionality) of our
 GPA calculator where it ties in with the view-model through data-binding.
 

@@ -43,6 +43,7 @@ function DropdownCtrl($scope) {
 }
 
 // The control we made starts here. The rest came with the lab.
+// We used the DropdownCtrl function above as a basis for our work.
 function DropdownGradeCtrl($scope) {
 
     // Keeps track of the states of all the buttons independently
@@ -87,6 +88,7 @@ function DropdownGradeCtrl($scope) {
     ];
 
     // Possible credits a course could have.
+    // Selecting 0 is equivalent to taking one less class for calculation.
     $scope.credits = [
         0,
         1,
